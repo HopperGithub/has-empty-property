@@ -1,4 +1,5 @@
-# has-empty-property 
+# has-empty-property [![NPM version](https://img.shields.io/npm/v/has-empty-property.svg?style=flat)](https://www.npmjs.com/package/has-empty-property)  [![License](https://img.shields.io/github/license/HopperGithub/has-empty-property.svg)](https://travis-ci.org/jonschlinkert/has-empty-property)
+
 
 > Returns true if the object does not have a property, or exsiting a empty property.
 
