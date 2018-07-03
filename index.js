@@ -8,13 +8,15 @@
 'use strict';
 
 module.exports = function (obj) {
-  for (var property in obj) {
-      if (obj[property] == undefined || obj[property] == null) {
-          return true;
-      }
-      if (obj[property].constructor == String && obj[property].length == 0) {
-          return true;
-      }
-  }
-  return false;
+    var empty = true;
+    for (var property in obj) {
+        empty = false;
+        if (obj[property] == undefined || obj[property] == null) {
+            return true;
+        }
+        if (obj[property].constructor == String && obj[property].length == 0) {
+            return true;
+        }
+    }
+    return empty;
 }

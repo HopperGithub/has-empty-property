@@ -11,22 +11,22 @@ require('mocha');
 var assert = require('assert');
 var hasEmptyProperty = require('./');
 
-describe('has a empty property', function() {
+describe('has a empty property', function () {
   var fixtures = [
     '',
     null,
     undefined,
   ];
 
-  fixtures.forEach(function(item, index) {
+  fixtures.forEach(function (item, index) {
     var obj = { [index]: item, 'compare': 'true' };
-    it(JSON.stringify(obj) + ' should has a empty property', function() {
+    it(JSON.stringify(obj) + ' should has a empty property', function () {
       assert(hasEmptyProperty(obj), 'expected "' + String(obj) + '" has a empty property');
     });
   });
 });
 
-describe('has not a empty property', function() {
+describe('has not a empty property', function () {
   var fixtures = [
     '   ', // issue#3
     '\r\n\t', // issue#3
@@ -51,8 +51,8 @@ describe('has not a empty property', function() {
     [],
     true,
     false,
-    +function() {},
-    function() {},
+    +function () { },
+    function () { },
     Infinity,
     -Infinity,
     Math.sin,
@@ -63,10 +63,17 @@ describe('has not a empty property', function() {
     {}
   ];
 
-  fixtures.forEach(function(item, index) {
+  fixtures.forEach(function (item, index) {
     var obj = { [index]: item, 'compare': 'true' };
-    it(JSON.stringify(obj) + ' should not have a empty propert', function() {
+    it(JSON.stringify(obj) + ' should not have a empty propert', function () {
       assert(!hasEmptyProperty(obj), 'expected "' + String(obj) + '" not has a empty propert');
     });
+  });
+});
+
+describe('has not a property', function () {
+  var obj = {};
+  it(JSON.stringify(obj) + ' should not a property', function () {
+    assert(hasEmptyProperty(obj), 'expected "' + String(obj) + '" not a property');
   });
 });
