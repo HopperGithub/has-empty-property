@@ -19,7 +19,7 @@ describe('has a empty property', function() {
   ];
 
   fixtures.forEach(function(item, index) {
-    var obj = { [index]: item };
+    var obj = { [index]: item, 'compare': 'true' };
     it(JSON.stringify(obj) + ' should has a empty property', function() {
       assert(hasEmptyProperty(obj), 'expected "' + String(obj) + '" has a empty property');
     });
@@ -57,12 +57,14 @@ describe('has not a empty property', function() {
     -Infinity,
     Math.sin,
     NaN,
+    true,
+    false,
     new Date(),
     {}
   ];
 
   fixtures.forEach(function(item, index) {
-    var obj = { [index]: item };
+    var obj = { [index]: item, 'compare': 'true' };
     it(JSON.stringify(obj) + ' should not have a empty propert', function() {
       assert(!hasEmptyProperty(obj), 'expected "' + String(obj) + '" not has a empty propert');
     });

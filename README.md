@@ -23,7 +23,7 @@ See the [tests](./test.js) for more examples.
 ### true
 
 ```js
-hasEmptyProperty({a: undefined});       // true
+hasEmptyProperty({a: undefined, b:'1', c: '2'});       // true
 ```
 
 ### False
@@ -31,7 +31,7 @@ hasEmptyProperty({a: undefined});       // true
 Everything else is false, as you would expect:
 
 ```js
-hasEmptyProperty({a: 'aa'});           // false
+hasEmptyProperty({a: 'aa', b:'1', c: '2'});           // false
 ```
 
 ## About
