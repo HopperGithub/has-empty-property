@@ -13,7 +13,7 @@ module.exports = function (obj) {
     var empty = true;
     for (var property in obj) {
         empty = false;
-        if (obj[property] == undefined || obj[property] == null) {
+        if (obj[property] == null) {
             return true;
         }
         if (obj[property].constructor == String && obj[property].length == 0) {

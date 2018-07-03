@@ -83,7 +83,9 @@ function getArr (item, index) {
 describe('empty object, array', function () {
   var emptyFixtures = [
     {},
-    []
+    [],
+    undefined,
+    null
   ];
   emptyFixtures.forEach(function (obj) {
     emptyProperty(obj, 0);
