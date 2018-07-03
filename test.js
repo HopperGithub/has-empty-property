@@ -59,6 +59,7 @@ describe('has not a empty property', function () {
     NaN,
     true,
     false,
+    0,
     new Date(),
     {}
   ];

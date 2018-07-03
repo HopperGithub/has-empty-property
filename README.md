@@ -1,6 +1,6 @@
 # has-empty-property 
 
-> Returns true if the object has a empty property.
+> Returns true if the object does not have a property, or exsiting a empty property.
 
 Please consider following this project's author, [Hopper Sun](https://github.com/HopperGithub), and consider starring the project to show your :heart: and support.
 
@@ -23,7 +23,10 @@ See the [tests](./test.js) for more examples.
 ### true
 
 ```js
-hasEmptyProperty({a: undefined, b:'1', c: '2'});       // true
+hasEmptyProperty({a: undefined, b:'1'});       // true
+hasEmptyProperty({a: null, b:'1'});            // true
+hasEmptyProperty({a: '', b:'1'});              // true
+hasEmptyProperty({});                          // true
 ```
 
 ### False
@@ -31,7 +34,11 @@ hasEmptyProperty({a: undefined, b:'1', c: '2'});       // true
 Everything else is false, as you would expect:
 
 ```js
-hasEmptyProperty({a: 'aa', b:'1', c: '2'});           // false
+hasEmptyProperty({a: '0', b:'1'});             // false
+hasEmptyProperty({a: ' ', b:'1'});             // false
+hasEmptyProperty({a: 'null', b:'1'});          // false
+hasEmptyProperty({a: 0, b:'1'});               // false
+hasEmptyProperty({a: true, b:'1'});            // false
 ```
 
 ## About
