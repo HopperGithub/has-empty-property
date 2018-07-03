@@ -3,7 +3,7 @@
 
 
 
-> Returns true if the object does not have a property, or exsiting a empty property.
+> Returns true if the object and array do not have a property, or exsiting a empty property.
 
 Please consider following this project's author, [Hopper Sun](https://github.com/HopperGithub), and consider starring the project to show your :heart: and support.
 
@@ -30,6 +30,8 @@ hasEmptyProperty({a: undefined, b:'1'});       // true
 hasEmptyProperty({a: null, b:'1'});            // true
 hasEmptyProperty({a: '', b:'1'});              // true
 hasEmptyProperty({});                          // true
+hasEmptyProperty([null, 1]);                   // true
+hasEmptyProperty([]);                          // true
 ```
 
 ### False
@@ -42,6 +44,8 @@ hasEmptyProperty({a: ' ', b:'1'});             // false
 hasEmptyProperty({a: 'null', b:'1'});          // false
 hasEmptyProperty({a: 0, b:'1'});               // false
 hasEmptyProperty({a: true, b:'1'});            // false
+hasEmptyProperty([0, '11']);                   // false
+hasEmptyProperty(['null', 'undefined']);       // false
 ```
 
 ## About
