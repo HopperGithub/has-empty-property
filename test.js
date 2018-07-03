@@ -13,36 +13,13 @@ var hasEmptyProperty = require('./');
 
 describe('has a empty property', function() {
   var fixtures = [
-    {
-      'a': '',
-    },
-    {
-      'b': null,
-    },
-    {
-      'c': undefined,
-    },
-    {
-      'd': new Array(),
-    },
-    {
-      'e': NaN,
-    },
-    {
-      'e1': Infinity,
-    },
-    {
-      'f': /foo/
-    },
-    {
-      'g': false
-    },
-    {
-      'g': function() {}
-    }
+    '',
+    null,
+    undefined,
   ];
 
-  fixtures.forEach(function(obj, idx) {
+  fixtures.forEach(function(item, index) {
+    var obj = { [index]: item };
     it(JSON.stringify(obj) + ' should has a empty property', function() {
       assert(hasEmptyProperty(obj), 'expected "' + String(obj) + '" has a empty property');
     });
@@ -53,8 +30,6 @@ describe('has not a empty property', function() {
   var fixtures = [
     '   ', // issue#3
     '\r\n\t', // issue#3
-    '',
-    '',
     '3a',
     'abc',
     'false',
@@ -83,8 +58,6 @@ describe('has not a empty property', function() {
     Math.sin,
     NaN,
     new Date(),
-    null,
-    undefined,
     {}
   ];
 

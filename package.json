@@ -14,8 +14,17 @@
     "url": "git+https://github.com/HopperGithub/has-empty-property.git"
   },
   "keywords": [
+    "object",
+    "property",
+    "empty",
+    "test",
+    "check",
+    "find",
+    "is",
+    "has",
     "has-empty-property",
-    "hasEmptyProperty"
+    "hasEmptyProperty",
+    "value"
   ],
   "author": "Hopper Sun (https://github.com/HopperGithub)",
   "license": "MIT",
