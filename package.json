@@ -1,6 +1,6 @@
 {
   "name": "has-empty-property",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "JavaScript/Node.js utility. Useful for checking object property is empty.",
   "main": "index.js",
   "files": [
@@ -34,7 +34,7 @@
   "homepage": "https://github.com/HopperGithub/has-empty-property#readme",
   "dependencies": {},
   "engines": {
-    "node": ">=0.12.0"
+    "node": ">=4.0"
   },
   "devDependencies": {
     "mocha": "^5.2.0"
