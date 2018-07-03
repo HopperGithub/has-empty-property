@@ -1,6 +1,6 @@
 {
   "name": "has-empty-property",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "JavaScript/Node.js utility. Useful for checking object property is empty.",
   "main": "index.js",
   "files": [

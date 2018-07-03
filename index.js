@@ -8,6 +8,8 @@
 'use strict';
 
 module.exports = function (obj) {
+    if (obj === null) throwErr('null');
+    else if (!Array.isArray(obj) && typeof obj !== 'object') throwErr(typeof obj);
     var empty = true;
     for (var property in obj) {
         empty = false;
@@ -19,4 +21,8 @@ module.exports = function (obj) {
         }
     }
     return empty;
+}
+
+function throwErr (type) {
+    throw new TypeError('Expected Array, Object, got ' + type);
 }
